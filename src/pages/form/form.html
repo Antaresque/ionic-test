@@ -1,0 +1,28 @@
+<!--
+  Generated template for the FormPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>form</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+
+      <ion-item>
+        <ion-label stacked>username/id</ion-label>
+        <ion-input type="text" [(ngModel)]='model.username'></ion-input>
+      </ion-item>
+      <ion-item>
+        <button (click)='formClick()'
+          ion-button outline padding float-right>Submit</button>
+      </ion-item>
+    </ion-list>
+</ion-content>
