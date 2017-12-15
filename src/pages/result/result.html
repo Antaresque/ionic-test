@@ -7,12 +7,22 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>result</ion-title>
+    <ion-title>Top Performance of {{ id }}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <ion-card *ngFor='let i of result'>
+      <ion-card-header>
+          {{ i?.beatmap_data?.artist }} - {{ i?.beatmap_data?.title }} [{{ i?.beatmap_data?.version }}
+      </ion-card-header>
+      <ion-card-content>
+          <ion-list>
+              <ion-item>{{ i?.pp | round }}pp // {{ i?.accuracy | percent:'1.2-2' }}</ion-item>
+              <ion-list-header>{{ i?.maxcombo }}/{{ i?.beatmap_data?.max_combo }} ({{ i?.count300 }}/{{ i?.count100 }}/{{ i?.count50 }}/{{ i?.countmiss }})</ion-list-header>
+          </ion-list>
+      </ion-card-content>
+    </ion-card>
 </ion-content>

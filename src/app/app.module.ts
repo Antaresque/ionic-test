@@ -1,3 +1,5 @@
+import { RoundPipe } from './../pages/result/round-pipe';
+import { ResultPage } from './../pages/result/result';
 import { FormPage } from './../pages/form/form';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -13,7 +15,9 @@ import { HomePage } from '../pages/home/home';
   declarations: [
     MyApp,
     HomePage,
-    FormPage
+    FormPage,
+    ResultPage,
+    RoundPipe
   ],
   imports: [
     BrowserModule,
@@ -24,7 +28,8 @@ import { HomePage } from '../pages/home/home';
   entryComponents: [
     MyApp,
     HomePage,
-    FormPage
+    FormPage,
+    ResultPage
   ],
   providers: [
     StatusBar,
